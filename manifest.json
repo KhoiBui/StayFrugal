@@ -1,0 +1,21 @@
+{
+    "name": "StayFrugal",
+    "version": "0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "That's the tool tip",
+        "default_popup": "popup.html"
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
